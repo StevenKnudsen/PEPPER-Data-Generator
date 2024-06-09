@@ -10,7 +10,7 @@ project(spiTx)
 pico_sdk_init()
 
 add_executable(spiTx
-  spiTx.c
+  main.c
 )
 
 # Add pico_stdlib library which aggregates commonly used features
