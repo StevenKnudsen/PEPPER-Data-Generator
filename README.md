@@ -3,12 +3,14 @@ A Raspberry Pi Pico-based emulator to generate instrument samples and output the
 
 In `main.c` SPI0 is set up as a master.
 
+```
 Pin   Signal
 GP19  SPI0_TX
 GP18  SPI0_SCK
 GP17  SPI0_CSn -- not used
 GP16  SPI0_RX
 GP20  CSn -- used instead of GP17
+```
 
 The default SPI0_CSn chip select signal cannot be used because we want to transmit 4 bytes at a go.
 This matches what the actual PEPPER FPGA does.
